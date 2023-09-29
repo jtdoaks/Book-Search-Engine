@@ -12,7 +12,7 @@ const typeDefs = `
     description: String!
     bookId: ID!
     image: String
-    title: String
+    title: String!
     link: String
   }
 
@@ -32,7 +32,7 @@ type Query {
 
     addUser(username:String!, email: String!, password: String!): Auth
 
-    saveBook(bookId: ID!, authors: String, description: String!, image: String, link: String, title:String):User
+    saveBook(bookId: ID!, authors: String!, description: String!, image: String!, link: String!, title: String!):User
    
     removeBook(bookId: ID!):User
  
